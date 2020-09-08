@@ -10,6 +10,15 @@
 		D0D166D2250716BC00DA8EE6 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D166C8250716BC00DA8EE6 /* Networking.framework */; };
 		D0D166D7250716BD00DA8EE6 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166D6250716BD00DA8EE6 /* NetworkingTests.swift */; };
 		D0D166D9250716BD00DA8EE6 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D166CB250716BC00DA8EE6 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D166F02507177000DA8EE6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166E32507177000DA8EE6 /* NetworkService.swift */; };
+		D0D166F12507177000DA8EE6 /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166E52507177000DA8EE6 /* HTTPRequestMethod.swift */; };
+		D0D166F22507177000DA8EE6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166E62507177000DA8EE6 /* HTTPRequest.swift */; };
+		D0D166F32507177000DA8EE6 /* HTTPRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166E72507177000DA8EE6 /* HTTPRequestParameters.swift */; };
+		D0D166F42507177000DA8EE6 /* DefaultNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166E92507177000DA8EE6 /* DefaultNetworkDispatcher.swift */; };
+		D0D166F52507177000DA8EE6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166EA2507177000DA8EE6 /* NetworkDispatcher.swift */; };
+		D0D166F62507177000DA8EE6 /* DispatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166EC2507177000DA8EE6 /* DispatchError.swift */; };
+		D0D166F72507177000DA8EE6 /* DefaultURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166EE2507177000DA8EE6 /* DefaultURLRequestBuilder.swift */; };
+		D0D166F82507177000DA8EE6 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D166EF2507177000DA8EE6 /* URLRequestBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +38,15 @@
 		D0D166D1250716BC00DA8EE6 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D166D6250716BD00DA8EE6 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		D0D166D8250716BD00DA8EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D166E32507177000DA8EE6 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D0D166E52507177000DA8EE6 /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestMethod.swift; sourceTree = "<group>"; };
+		D0D166E62507177000DA8EE6 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		D0D166E72507177000DA8EE6 /* HTTPRequestParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestParameters.swift; sourceTree = "<group>"; };
+		D0D166E92507177000DA8EE6 /* DefaultNetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcher.swift; sourceTree = "<group>"; };
+		D0D166EA2507177000DA8EE6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		D0D166EC2507177000DA8EE6 /* DispatchError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchError.swift; sourceTree = "<group>"; };
+		D0D166EE2507177000DA8EE6 /* DefaultURLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultURLRequestBuilder.swift; sourceTree = "<group>"; };
+		D0D166EF2507177000DA8EE6 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +89,11 @@
 		D0D166CA250716BC00DA8EE6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D0D166E82507177000DA8EE6 /* Dispatcher */,
+				D0D166EB2507177000DA8EE6 /* Error */,
+				D0D166E42507177000DA8EE6 /* Request */,
+				D0D166ED2507177000DA8EE6 /* RequestBuilder */,
+				D0D166E22507177000DA8EE6 /* Service */,
 				D0D166CB250716BC00DA8EE6 /* Networking.h */,
 				D0D166CC250716BC00DA8EE6 /* Info.plist */,
 			);
@@ -84,6 +107,50 @@
 				D0D166D8250716BD00DA8EE6 /* Info.plist */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		D0D166E22507177000DA8EE6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D0D166E32507177000DA8EE6 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D0D166E42507177000DA8EE6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D0D166E52507177000DA8EE6 /* HTTPRequestMethod.swift */,
+				D0D166E62507177000DA8EE6 /* HTTPRequest.swift */,
+				D0D166E72507177000DA8EE6 /* HTTPRequestParameters.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		D0D166E82507177000DA8EE6 /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				D0D166E92507177000DA8EE6 /* DefaultNetworkDispatcher.swift */,
+				D0D166EA2507177000DA8EE6 /* NetworkDispatcher.swift */,
+			);
+			path = Dispatcher;
+			sourceTree = "<group>";
+		};
+		D0D166EB2507177000DA8EE6 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D0D166EC2507177000DA8EE6 /* DispatchError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		D0D166ED2507177000DA8EE6 /* RequestBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				D0D166EE2507177000DA8EE6 /* DefaultURLRequestBuilder.swift */,
+				D0D166EF2507177000DA8EE6 /* URLRequestBuilder.swift */,
+			);
+			path = RequestBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +262,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D166F22507177000DA8EE6 /* HTTPRequest.swift in Sources */,
+				D0D166F72507177000DA8EE6 /* DefaultURLRequestBuilder.swift in Sources */,
+				D0D166F82507177000DA8EE6 /* URLRequestBuilder.swift in Sources */,
+				D0D166F42507177000DA8EE6 /* DefaultNetworkDispatcher.swift in Sources */,
+				D0D166F62507177000DA8EE6 /* DispatchError.swift in Sources */,
+				D0D166F12507177000DA8EE6 /* HTTPRequestMethod.swift in Sources */,
+				D0D166F52507177000DA8EE6 /* NetworkDispatcher.swift in Sources */,
+				D0D166F02507177000DA8EE6 /* NetworkService.swift in Sources */,
+				D0D166F32507177000DA8EE6 /* HTTPRequestParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +464,7 @@
 		D0D166E0250716BD00DA8EE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 943P7Q4P6P;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;
@@ -406,6 +483,7 @@
 		D0D166E1250716BD00DA8EE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 943P7Q4P6P;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;
