@@ -10,6 +10,8 @@ import Foundation
 
 open class DefaultURLRequestBuilder: URLRequestBuilder {
     
+    public init() {}
+    
     public func build(_ request: HTTPRequest) -> URLRequest? {
         //Build URL
         var url = URL(string: request.baseURL)

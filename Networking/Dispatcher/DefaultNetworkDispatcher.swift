@@ -13,7 +13,7 @@ open class DefaultNetworkDispatcher: NetworkDispatcher {
     public var requestBuilder: URLRequestBuilder
     public let session: URLSession
     
-    init(with requestBuilder: URLRequestBuilder, for session: URLSession) {
+    public init(with requestBuilder: URLRequestBuilder, for session: URLSession) {
         self.requestBuilder = requestBuilder
         self.session = session
     }
